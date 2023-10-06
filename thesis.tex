@@ -1,0 +1,64 @@
+\documentclass{thesis}
+\hypersetup{
+    pdfauthor={Ишутин М. А.}, % Автор
+    pdftitle={ВКР},    % Заголовок
+    pdfsubject={Диалоговая система для разработчиков видеоигр}
+}
+
+\input{settings.tex}
+
+\begin{document}
+
+%\input{disser_tex/title}                  % Титульный лист
+%\includepdf{title.pdf}
+
+\setcounter{page}{3}
+
+\addchap*{АННОТАЦИЯ}
+  \input{chapters/annotation.tex}
+
+\thispagestyle{empty}
+
+\tableofcontents                          % Оглавление
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+
+\thispagestyle{empty}
+
+\addchap{ВВЕДЕНИЕ}
+	\input{chapters/introduction}           % Введение
+
+\chapter{ЗАДАЧА КЛАССИФИКАЦИИ ТЕКСТОВ}
+	\input{chapters/1_text_classification.tex}
+	
+\chapter{ОПИСАНИЕ РАЗРАБОТАННЫХ ПРОГРАММ}
+	\input{chapters/2_program_description.tex}
+
+\chapter{НАБОР ДАННЫХ}
+  \input{chapters/3_dataset.tex}
+
+\chapter{ВЫБОР ОПТИМАЛЬНЫХ ПАРАМЕТРОВ ОБУЧЕНИЯ}
+  \input{chapters/4_optimal_parameters.tex}
+
+\chapter{СРАВНЕНИЕ МОДЕЛЕЙ}
+  \input{chapters/5_models_comparison.tex}
+
+\addchap{ЗАКЛЮЧЕНИЕ}
+	\input{chapters/conclusion}
+
+\break
+
+\input{biblipgraphy.tex}
+
+\appendix
+\renewcommand{\thechapter}{\Asbuk{chapter}}
+\chapter{ФРАГМЕНТ ПРОГРАММЫ ДЛЯ ГЕНЕРАЦИИ ДАННЫХ}
+  \label{app:data-generating}\input{appendicies/appendix1.tex}
+\chapter{ТЕКСТ ПРОГРАММЫ ДЛЯ ПОИСКА ОПТИМАЛЬНЫХ ПАРАМЕТРОВ}
+  \label{app:example}\input{appendicies/appendix2.tex}
+\chapter{ТЕКСТ ПРОГРАММЫ ДЛЯ СРАВНЕНИЯ МОДЕЛЕЙ}
+  \label{app:train}\input{appendicies/appendix3.tex}
+\chapter{ГРАФИКИ ПРИ ПОИСКЕ ОПТИМАЛЬНЫХ ПАРАМЕТРОВ}
+  \label{app:sweeps}\input{appendicies/appendix4}
+\chapter{ГРАФИКИ ПРИ ОБУЧЕНИИ МОДЕЛЕЙ ДЛЯ СРАВНЕНИЯ}
+  \label{app:models}\input{appendicies/appendix5.tex}
+\end{document}

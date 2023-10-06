@@ -1,0 +1,66 @@
+
+
+\onehalfspacing
+
+\usepackage{float}
+\usepackage{listings}  
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{caption}
+\usepackage{fancyhdr}
+\graphicspath{{./images/}}
+
+% Параметры названия для иллюстраций (Рисунок 1 - <название>)
+\DeclareCaptionLabelFormat{PictureCaptionFormat}{Рисунок {#2}}
+\captionsetup[figure] {
+labelformat=PictureCaptionFormat,
+skip=0pt,
+format=hang,
+justification=raggedright,
+labelsep=endash
+}
+
+% Параметры названия для таблиц (Таблица 1 - <название>)
+\DeclareCaptionLabelFormat{TableCaptionFormat}{Таблица {#2}}
+\captionsetup[table] {
+labelformat=TableCaptionFormat,
+skip=0pt,
+format=hang,
+justification=raggedright,
+singlelinecheck=off,
+labelsep=endash
+}
+
+\DeclareCaptionLabelFormat{ListingCaptionFormat}{Листинг {#2}}
+\captionsetup[lstinputlisting] {
+  labelformat=PictureCaptionFormat,
+  skip=0pt,
+  format=hang,
+  justification=raggedright,
+  labelsep=endash
+}
+
+%\setcounter{tocdepth}{2}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstloadlanguages{Python}
+\lstset{
+  language=Python,
+  keywordstyle={\bfseries \color{blue}},
+  captionpos=b,
+  tabsize=4,
+  basicstyle=\footnotesize,
+  breaklines=true,
+  breakatwhitespace=true,
+  extendedchars=true,
+  backgroundcolor=\color{white},
+  commentstyle=\color{mygreen},
+  showstringspaces=false,
+  escapeinside={\%*}{*)},
+  stringstyle=\color{mymauve},
+  numbers=left,
+  numberstyle=\tiny\color{gray}
+  }
